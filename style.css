@@ -1,34 +1,40 @@
 :root {
     --primary-color: #5b86e5;
-    --bg-color: #f0f4f8;
+    --secondary-color: #36d1dc;
+    --accent-color: #ff6b6b;
+    --bg-color: #f4f7f6;
     --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-sub: #7f8c8d;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, #f0f4f8 0%, #d7e1ec 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
-    color: #333;
+    color: var(--text-main);
 }
 
 .container {
     background: var(--card-bg);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     max-width: 480px;
     width: 100%;
     text-align: center;
-    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-h1 { margin-bottom: 10px; color: #2c3e50; }
-.subtitle { color: #7f8c8d; margin-bottom: 30px; }
+h1 { margin-bottom: 5px; color: var(--text-main); }
+.subtitle { color: var(--text-sub); margin-bottom: 25px; font-size: 0.9em; }
+.disclaimer { font-size: 12px; color: #bbb; margin-top: 30px; }
 
 .btn {
     display: block;
@@ -42,24 +48,44 @@ h1 { margin-bottom: 10px; color: #2c3e50; }
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    transition: transform 0.1s, background 0.2s;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(91, 134, 229, 0.2);
 }
-.btn:active { transform: scale(0.98); }
-.btn:hover { background-color: #36d1dc; }
+.btn:hover { background: var(--secondary-color); transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
 
-/* 选项按钮特定样式 */
+/* 选项按钮 */
 .option-btn {
     background: #f8f9fa;
     color: #333;
     border: 2px solid #e9ecef;
     text-align: left;
+    box-shadow: none;
+    font-size: 15px;
+    line-height: 1.4;
 }
 .option-btn:hover {
     border-color: var(--primary-color);
     background: #eef2ff;
+    color: var(--primary-color);
+    transform: translateX(5px);
 }
 
-.hidden { display: none; }
+/* 撤回按钮 (文字按钮) */
+.btn-text {
+    background: transparent;
+    color: #999;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: underline;
+    padding: 5px;
+}
+.btn-text:hover { color: var(--primary-color); }
+
+.hidden { display: none !important; }
 
 /* 进度条 */
 .progress-bar {
@@ -67,144 +93,331 @@ h1 { margin-bottom: 10px; color: #2c3e50; }
     height: 6px;
     background: #eee;
     border-radius: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     overflow: hidden;
 }
 #progress-fill {
     height: 100%;
     background: var(--primary-color);
     width: 0%;
-    transition: width 0.3s;
+    transition: width 0.3s ease;
 }
 
-/* 结果页 */
+/* 题目区域 */
+.q-badge {
+    background: #eef2ff;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#question-text {
+    margin: 15px 0 25px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* 结果卡片 */
 .result-card {
-    background: #fff5f5;
-    border: 2px dashed #ff6b6b;
-    padding: 20px;
+    background: #fff;
+    border: 3px dashed #e0e0e0;
+    padding: 30px 20px;
     border-radius: 15px;
     margin: 20px 0;
+    transition: all 0.3s;
 }
-.result-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #c0392b;
-    margin-bottom: 10px;
+.emoji-display {
+    font-size: 72px;
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
 }
-.result-desc {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
+.result-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #c0392b;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.result-desc { color: #666; font-size: 14px; line-height: 1.6; }
+
+/* 赛博露出按钮 */
+.share-btn {
+    background-color: #8e44ad;
+    box-shadow: 0 4px 0 #732d91;
+}
+.share-btn:hover { background-color: #9b59b6; }
+.share-btn:active { box-shadow: none; transform: translateY(4px); }
+
+/* 标签云 */
 .tag-cloud span {
     display: inline-block;
     background: #eee;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 4px 10px;
+    border-radius: 12px;
     font-size: 12px;
-    margin: 2px;
-    color: #666;
+    margin: 3px;
+    color: #777;
 }
 
-/* 新增样式：抽象 Emoji 展示 */
-.emoji-display {
-    font-size: 64px; /* 超大字体 */
-    letter-spacing: 10px; /* 拉开间距 */
-    margin: 20px 0;
-    text-shadow: 2px 2px 0px rgba(0,0,0,0.1); /* 给Emoji加点阴影立体感 */
-    animation: float 3s ease-in-out infinite; /* 浮动动画 */
-    cursor: default;
-    user-select: none;
-}
-
-/* 定义浮动动画 */
-@keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-}
-
-/* 针对手机端的适配 */
-@media (max-width: 400px) {
-    .emoji-display {
-        font-size: 48px;
-        letter-spacing: 5px;
-    }
-}
-
-/* === 赛博露出按钮样式 === */
-.share-btn {
-    background-color: #8e44ad; /* 骚紫色，符合赛博露出气质 */
-    margin-bottom: 15px; /* 和下面的按钮拉开距离 */
-    font-weight: bold;
-    box-shadow: 0 4px 0 #732d91; /* 增加立体感 */
-}
-.share-btn:hover {
-    background-color: #9b59b6;
-}
-.share-btn:active {
-    box-shadow: none;
-    transform: translateY(4px);
-}
-
-/* === 截图弹窗样式 === */
+/* 弹窗 */
 .modal {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8); /* 黑色半透明背景 */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     backdrop-filter: blur(5px);
 }
-
 .modal-content {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    text-align: center;
     max-width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
+    text-align: center;
 }
-
-.modal-content h3 {
-    margin-top: 0;
-    color: #333;
-    font-size: 16px;
-}
-
 .modal-content img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    margin: 10px 0;
-    border: 2px solid #eee;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
+.close-btn { background: #95a5a6; margin-top: 15px; padding: 10px; }
 
-.close-btn {
-    background-color: #95a5a6;
-    padding: 8px;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-/* === 水印样式 (截图时才显示) === */
+/* 水印 */
 .watermark {
     margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px dashed #eee;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #ccc;
     font-size: 12px;
-    color: #aaa;
-    display: none; /* 平时隐藏 */
+    display: none;
+    font-family: monospace;
 }
 
-/* === 修复Bug：添加到 style.css 的最末尾 === */
+:root {
+    --primary-color: #5b86e5;
+    --secondary-color: #36d1dc;
+    --accent-color: #ff6b6b;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-main: #2c3e50;
+    --text-sub: #7f8c8d;
+}
 
-/* 强制覆盖 .modal 的 display: flex */
-.modal.hidden {
-    display: none !important;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d7e1ec 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-main);
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 { margin-bottom: 5px; color: var(--text-main); }
+.subtitle { color: var(--text-sub); margin-bottom: 25px; font-size: 0.9em; }
+.disclaimer { font-size: 12px; color: #bbb; margin-top: 30px; }
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 4px 6px rgba(91, 134, 229, 0.2);
+}
+.btn:hover { background: var(--secondary-color); transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* 选项按钮 */
+.option-btn {
+    background: #f8f9fa;
+    color: #333;
+    border: 2px solid #e9ecef;
+    text-align: left;
+    box-shadow: none;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.option-btn:hover {
+    border-color: var(--primary-color);
+    background: #eef2ff;
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* 撤回按钮 (文字按钮) */
+.btn-text {
+    background: transparent;
+    color: #999;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: underline;
+    padding: 5px;
+}
+.btn-text:hover { color: var(--primary-color); }
+
+.hidden { display: none !important; }
+
+/* 进度条 */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+#progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* 题目区域 */
+.q-badge {
+    background: #eef2ff;
+    color: var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+#question-text {
+    margin: 15px 0 25px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* 结果卡片 */
+.result-card {
+    background: #fff;
+    border: 3px dashed #e0e0e0;
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+.emoji-display {
+    font-size: 72px;
+    margin-bottom: 15px;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.result-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #c0392b;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.result-desc { color: #666; font-size: 14px; line-height: 1.6; }
+
+/* 赛博露出按钮 */
+.share-btn {
+    background-color: #8e44ad;
+    box-shadow: 0 4px 0 #732d91;
+}
+.share-btn:hover { background-color: #9b59b6; }
+.share-btn:active { box-shadow: none; transform: translateY(4px); }
+
+/* 标签云 */
+.tag-cloud span {
+    display: inline-block;
+    background: #eee;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 3px;
+    color: #777;
+}
+
+/* 弹窗 */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    text-align: center;
+}
+.modal-content img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.close-btn { background: #95a5a6; margin-top: 15px; padding: 10px; }
+
+/* 水印 */
+.watermark {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #ccc;
+    font-size: 12px;
+    display: none;
+    font-family: monospace;
+}
+
+/* === 新增：底部作者标识样式 === */
+.footer-author {
+    margin-top: 30px;
+    font-size: 11px;
+    color: #bdc3c7;
+    font-family: Consolas, Monaco, "Andale Mono", monospace; /* 极客代码风 */
+    letter-spacing: 0.5px;
+    user-select: none; /* 防止选中文本 */
 }
