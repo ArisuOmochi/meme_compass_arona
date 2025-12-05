@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛博成分查询器</title>
+    <!-- 1. 关键修复：引入截图库 html2canvas (必须放在这里) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- 引入CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="app">
+    <!-- 1. 欢迎页 -->
+    <div id="welcome-screen">
+        <h1>赛博成分查询器</h1>
+        <p class="subtitle">通过算法精准识别你的赛博案底</p>
+        <div class="tag-cloud">
+            <span>#键政</span> <span>#二次元</span> <span>#魔怔</span>
+        </div>
+        <p style="font-size:12px; color:#999; margin-top:30px;">*仅供娱乐，切勿当真*</p>
+        <button class="btn start-btn" onclick="startTest()">开始查成分</button>
+    </div>
+
+    <!-- 2. 答题页 -->
+    <div id="quiz-screen" class="hidden">
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+        <div class="question-card">
+            <h3 id="question-text">加载中...</h3>
+            <div id="options-container"></div>
+        </div>
+    </div>
+
+    <!-- 3. 结果页 -->
+    <div id="result-screen" class="hidden">
+        <h2>检测完成</h2>
+        <p>宝宝，你的成分是：</p>
+        
+        <!-- 给这个卡片加个 id="capture-area"，这是我们要截图的区域 -->
+        <div class="result-card" id="capture-area">
+            <div id="result-emoji" class="emoji-display"></div>
+            <div class="result-title" id="result-label">???</div>
+            <div class="result-desc" id="result-desc">正在计算...</div>
+            
+            <!-- 只有截图时才显示的页脚，平时隐藏 -->
+            <div class="watermark hidden-watermark">
+                —— 赛博成分查询器 ——
+            </div>
+        </div>
+
+        <!-- 赛博露出按钮 -->
+        <button class="btn share-btn" onclick="generateShareImage()">📸 赛博露出 (生成截图)</button>
+
+        <button class="btn" onclick="restartTest()">不服，重测</button>
+    </div>
+
+    <!-- 4. 图片生成后的弹窗 -->
+    <div id="image-modal" class="modal hidden" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <h3>长按保存图片发群里</h3>
+            <div id="img-container"></div> <!-- 图片会插在这里 -->
+            <button class="btn close-btn" onclick="closeModal()">关闭</button>
+        </div>
+    </div>
+</div>
+
+<!-- 引入JS -->
+<script src="script.js"></script>
+</body>
+</html>

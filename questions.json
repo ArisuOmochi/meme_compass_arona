@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "text": "关于《黑神话：悟空》获得巨大成功，你的第一反应是？",
+    "options": [
+      { "text": "赢！文化输出！中国3A站起来了！", "scores": { "pol_national": 5, "game_console": 2 } },
+      { "text": "好玩是好玩，但某些群体闹麻了，这种空气墙放在国外早被喷了。", "scores": { "game_console": 5, "pol_right": 2 } },
+      { "text": "没玩过，但听说主创团队歧视女性？避雷。", "scores": { "gender_fem": 8, "game_hater": 2 } },
+      { "text": "纯路人，不如王者荣耀好玩。", "scores": { "vibe_normie": 5, "game_console": -5 } }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "提到“资本家”这三个字，你脑海里浮现的画面是？",
+    "options": [
+      { "text": "路灯挂件，剥削剩余价值的吸血鬼。", "scores": { "pol_left": 8 } },
+      { "text": "提供就业岗位的人，市场经济的必要一环。", "scores": { "pol_right": 5 } },
+      { "text": "大伟哥（米哈游）、马化腾这种？希望能多发点福利。", "scores": { "game_mihoyo": 3, "vibe_normie": 3 } },
+      { "text": "想尽办法润去北欧的借口。", "scores": { "pol_right": 3, "vibe_abstract": 2 } }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "看到网上有人刷“启动！”，你下意识会接什么？",
+    "options": [
+      { "text": "原来你也玩原神！(狂喜)", "scores": { "game_mihoyo": 10, "vibe_otaku": 3 } },
+      { "text": "OP（原批）能不能死一死啊？", "scores": { "game_hater": 10, "vibe_abstract": 5 } },
+      { "text": "门酱？这是在玩什么梗？", "scores": { "vibe_normie": 5 } },
+      { "text": "黑暗降临！(反讽语气)", "scores": { "vibe_abstract": 5, "game_hater": 2 } }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "关于当前的国际局势（如中东、东欧），你的看法倾向于？",
+    "options": [
+      { "text": "支持正义之师，反抗霸权主义！", "scores": { "pol_national": 5, "pol_left": 3 } },
+      { "text": "文明世界与野蛮的冲突，我站文明一边。", "scores": { "pol_right": 8 } },
+      { "text": "S3赛季快点开打，我想看烟花（核弹）。", "scores": { "vibe_abstract": 8, "pol_left": 2 } },
+      { "text": "太远了，不如关心下调休什么时候取消。", "scores": { "vibe_normie": 5 } }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "当你刷到“彩礼30万”的新闻时，你想说什么？",
+    "options": [
+      { "text": "卖女儿是吧？龟男才娶，独自美丽。", "scores": { "gender_man": 8, "vibe_abstract": 2 } },
+      { "text": "这是对女性生育价值的补偿，还有冠姓权呢？", "scores": { "gender_fem": 8 } },
+      { "text": "封建糟粕，婚姻制度本质是私有制的产物。", "scores": { "pol_left": 6 } },
+      { "text": "还好我没女朋友/男朋友，省钱了。", "scores": { "vibe_otaku": 4, "vibe_normie": 2 } }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "如何评价虚拟主播（Vtuber/Vup）？",
+    "options": [
+      { "text": "嘉然/东雪莲/永雏塔菲...我的老婆们！", "scores": { "vibe_otaku": 10, "vibe_abstract": 2 } },
+      { "text": "套皮女主播，给不认识的人爆金币，理解不能。", "scores": { "vibe_normie": 5 } },
+      { "text": "V畜滚出克。", "scores": { "vibe_abstract": 4, "game_console": 2 } },
+      { "text": "这是一种新型的数字异化劳动。", "scores": { "pol_left": 4 } }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "如果给你一个移民的机会，你会去哪里？",
+    "options": [
+      { "text": "美国/日本/北欧，空气都香甜一点。", "scores": { "pol_right": 10 } },
+      { "text": "不去，金窝银窝不如自己的狗窝，何况中国现在很安全。", "scores": { "pol_national": 8 } },
+      { "text": "去提瓦特大陆（原神世界）。", "scores": { "game_mihoyo": 8, "vibe_otaku": 5 } },
+      { "text": "有没有那种没有政府的无政府主义公社？", "scores": { "pol_left": 5, "vibe_abstract": 3 } }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "看到丁真、蔡徐坤、抽象带篮子的表情包，你会？",
+    "options": [
+      { "text": "熟练使用，并发出爆笑。", "scores": { "vibe_abstract": 10 } },
+      { "text": "觉得低俗，不尊重人。", "scores": { "vibe_normie": 5, "gender_fem": 2 } },
+      { "text": "一眼顶真，鉴定为纯纯的飞舞。", "scores": { "vibe_abstract": 8, "gender_man": 3 } },
+      { "text": "只看二次元老婆，不看三次元男人。", "scores": { "vibe_otaku": 5 } }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "如何看待“考公/考编”热潮？",
+    "options": [
+      { "text": "宇宙的尽头是编制，岸上的人才是人。", "scores": { "pol_national": 3, "vibe_normie": 5 } },
+      { "text": "不想当做题家了，还是去做想做的事吧。", "scores": { "pol_right": 3 } },
+      { "text": "这也是一种为人民服务，如果是真心的话。", "scores": { "pol_left": 3 } },
+      { "text": "我就烂在家里啃老/全职打游戏，不卷了。", "scores": { "vibe_abstract": 5, "vibe_otaku": 3 } }
+    ]
+  },
+  {
+    "id": 10,
+    "text": "对于腾讯游戏（王者荣耀、和平精英），你的态度是？",
+    "options": [
+      { "text": "社交必备，朋友叫我就玩。", "scores": { "vibe_normie": 8 } },
+      { "text": "抄袭起家，氪金垃圾，狗都不玩。", "scores": { "game_console": 8, "game_mihoyo": 2 } },
+      { "text": "用心创造快乐（确信）。", "scores": { "vibe_abstract": 3 } },
+      { "text": "电子海洛因，毒害青少年。", "scores": { "pol_national": 2 } }
+    ]
+  },
+  {
+    "id": 11,
+    "text": "你更倾向于浏览哪个平台？",
+    "options": [
+      { "text": "NGA/贴吧 (找乐子，对线)", "scores": { "gender_man": 5, "vibe_abstract": 5, "game_console": 3 } },
+      { "text": "小红书/豆瓣 (看生活，避雷)", "scores": { "gender_fem": 8, "vibe_normie": 2 } },
+      { "text": "Bilibili (二次元，学习)", "scores": { "vibe_otaku": 6, "game_mihoyo": 2, "pol_left": 2 } },
+      { "text": "知乎/推特 (看深度/看黑料)", "scores": { "pol_right": 4, "pol_left": 2 } }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "怎么看“华为”这个品牌？",
+    "options": [
+      { "text": "遥遥领先！必须支持国货之光。", "scores": { "pol_national": 10 } },
+      { "text": "爱国营销太重了，买手机就是买手机，别绑架我。", "scores": { "pol_right": 5, "game_console": 2 } },
+      { "text": "太贵了买不起，我是米粉/果粉。", "scores": { "vibe_normie": 3 } },
+      { "text": "海军虽迟但到。", "scores": { "vibe_abstract": 4, "game_hater": 2 } }
+    ]
+  },
+  {
+    "id": 13,
+    "text": "如果喜欢的游戏角色被策划削弱了或者剧情写崩了，你会？",
+    "options": [
+      { "text": "开发票！卡车冲楼！独轮车爆破直播间！", "scores": { "game_mihoyo": 5, "vibe_abstract": 6 } },
+      { "text": "退游保平安，垃圾游戏不值得。", "scores": { "vibe_normie": 4 } },
+      { "text": "寄希望于同人二创来治愈自己。", "scores": { "vibe_otaku": 8 } },
+      { "text": "大骂策划全家，然后在贴吧挂人。", "scores": { "gender_man": 3, "vibe_abstract": 5 } }
+    ]
+  },
+  {
+    "id": 14,
+    "text": "关于“猫/狗”等宠物话题，你最反感哪种言论？",
+    "options": [
+      { "text": "反感“虐猫/爱猫TV”，太残忍变态了。", "scores": { "vibe_normie": 5, "gender_fem": 2 } },
+      { "text": "反感“猫孝子/伴侣动物保护法”，人还没吃饱呢。", "scores": { "pol_national": 4, "gender_man": 3 } },
+      { "text": "反感给猫绝育，这是剥夺动物权利。", "scores": { "pol_right": 2 } },
+      { "text": "不反感，我是furry（兽迷）。", "scores": { "vibe_otaku": 6, "vibe_abstract": 3 } }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "提到“1949年”，你首先想到的是？",
+    "options": [
+      { "text": "中国人民站起来了！", "scores": { "pol_national": 8, "pol_left": 5 } },
+      { "text": "那之后有些运动...唉，不说了。", "scores": { "pol_right": 6 } },
+      { "text": "历史课本上的一个考点。", "scores": { "vibe_normie": 5 } },
+      { "text": "建国后不许成精。", "scores": { "vibe_abstract": 4 } }
+    ]
+  },
+  {
+    "id": 16,
+    "text": "对于“二次元手游”（如明日方舟、碧蓝航线等），你的看法？",
+    "options": [
+      { "text": "虽然玩，但我是高贵的剧情/强度党，不搞饭圈。", "scores": { "vibe_otaku": 5, "game_console": 2 } },
+      { "text": "我是来舔老婆/老公的，出皮肤就氪。", "scores": { "vibe_otaku": 8, "game_mihoyo": 2 } },
+      { "text": "全是软色情擦边球，早该管管了。", "scores": { "gender_fem": 4, "pol_national": 3 } },
+      { "text": "二次元钱真好赚。", "scores": { "vibe_abstract": 3, "vibe_normie": 2 } }
+    ]
+  },
+  {
+    "id": 17,
+    "text": "对于网络上的“性别对立”骂战，你的真实想法？",
+    "options": [
+      { "text": "T0技能真的强，小仙女惹不起。", "scores": { "gender_man": 8, "vibe_abstract": 3 } },
+      { "text": "虽然激烈，但这是女性觉醒的必经之路。", "scores": { "gender_fem": 8, "pol_left": 2 } },
+      { "text": "这就是底层互害，转移矛盾罢了。", "scores": { "pol_left": 8, "vibe_abstract": 2 } },
+      { "text": "看乐子，打起来打起来！", "scores": { "vibe_abstract": 8 } }
+    ]
+  },
+  {
+    "id": 18,
+    "text": "假如你是游戏制作人，你会优先考虑？",
+    "options": [
+      { "text": "游戏性第一，玩法必须硬核。", "scores": { "game_console": 10 } },
+      { "text": "美术和人设，必须让玩家愿意喊老婆。", "scores": { "game_mihoyo": 5, "vibe_otaku": 5 } },
+      { "text": "宣扬传统文化，讲好中国故事。", "scores": { "pol_national": 8 } },
+      { "text": "怎么骗氪怎么来，换皮滚服。", "scores": { "pol_right": 2, "game_hater": 2 } }
+    ]
+  },
+  {
+    "id": 19,
+    "text": "如何看待“那兔”（那年那兔那些事）？",
+    "options": [
+      { "text": "感动哭了，来世还生种花家！", "scores": { "pol_national": 10 } },
+      { "text": "幼稚的爱国主义教育，掩盖了很多问题。", "scores": { "pol_right": 6, "pol_left": 3 } },
+      { "text": "以前看过，现在无感。", "scores": { "vibe_normie": 4 } },
+      { "text": "纳粹兔（极端黑话）。", "scores": { "pol_right": 8, "vibe_abstract": 4 } }
+    ]
+  },
+  {
+    "id": 20,
+    "text": "最后一题，你觉得自己是什么成分？",
+    "options": [
+      { "text": "我就是个普通人，别给我贴标签。", "scores": { "vibe_normie": 10 } },
+      { "text": "成分复杂，叠了好多buff。", "scores": { "vibe_abstract": 5 } },
+      { "text": "我是神里绫华的狗/我是嘉心糖/我是op...", "scores": { "game_mihoyo": 5, "vibe_otaku": 5 } },
+      { "text": "我是坚定的共产主义接班人。", "scores": { "pol_left": 8, "pol_national": 5 } }
+    ]
+  }
+]
