@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "2.0",
+    "version": "2.1",
     "title": "2025中文互联网成分查询器"
   },
   "dimensions": {
@@ -252,13 +252,15 @@
         "emoji": "🛠️⚡️🐵🚩",
         "desc": "你试图在提瓦特大陆建立苏维埃，成分极其复杂。",
         "conditions": { "pol_left": 8, "game_mihoyo": 10 },
-        "exclude_hater": true
+        "exclude_hater": true,
+        "exclusions": { "pol_right": 8 } 
       },
       {
-        "name": "黑神话吹",
+        "name": "猴批",
         "emoji": "🐒👑🆙🇨🇳",
         "desc": "只要是国产3A你就吹爆，容不得一点批评。",
-        "conditions": { "pol_national": 8, "game_console": 5 }
+        "conditions": { "pol_national": 8, "game_console": 5 },
+        "exclusions": { "gender_fem": 6, "game_mihoyo": 8 }
       },
       {
         "name": "抗压原批",
@@ -277,13 +279,15 @@
         "name": "精日肥宅",
         "emoji": "🎌🍱🏃🐖",
         "desc": "身在国内，心在秋叶原。",
-        "conditions": { "pol_right": 8, "vibe_otaku": 8 }
+        "conditions": { "pol_right": 8, "vibe_otaku": 8 },
+        "exclusions": { "pol_national": 8 }
       },
       {
         "name": "塞尔达卫兵",
         "emoji": "🛡️🗡️🌲🐫",
         "desc": "看到米哈游就像看到了杀父仇人。",
-        "conditions": { "game_hater": 8, "game_console": 5 }
+        "conditions": { "game_hater": 8, "game_console": 5 },
+        "exclusions": { "game_mihoyo": 5 }
       },
       {
         "name": "赛博纳粹",
